@@ -1,0 +1,28 @@
+{% extends "header.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="container">
+        <div class="jumbotron d-flex">
+            <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 style="text-align: center">{{ post.name }}</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4 style="text-align: center">{{ post.short_description }}</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12" style="text-align: center">
+                    {{ post.description|safe }}
+                </div>
+            </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

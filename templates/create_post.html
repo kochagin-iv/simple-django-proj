@@ -1,0 +1,20 @@
+{% extends "header.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="container">
+        <h2 style="text-align: center">Создание нового поста</h2>
+        <p>
+        {{ form.media }}
+        {{ form|crispy }}
+        </p>
+
+
+        <input type="submit" class="btn btn-primary btn-lg btn-block" value="Добавить пост"></input>
+    </div>
+    </form>
+{% endblock %}
